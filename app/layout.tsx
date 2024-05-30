@@ -5,7 +5,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 import { ToastProvider } from '@/components/providers/toaster-provider'
 // import { ToastProvider } from '@/components/providers/toaster-provider'
 import { ConfettiProvider } from '@/components/providers/confetti-provider'
-
+import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -25,6 +25,7 @@ export default function RootLayout({
           <ConfettiProvider /> 
           <ToastProvider/>
           {children}
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>
